@@ -5,8 +5,8 @@ import javax.inject.Inject
 
 class Coffee(private val milk: Milk){
     fun makeCoffee(){
-        Log.d("Coffee", "Coffee is ready")
         milk.makeMilk()
+        Log.d("Coffee", "Coffee is ready")
     }
 }
 

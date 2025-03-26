@@ -1,5 +1,6 @@
 package com.example.daggerhiltapplication
 
+import com.example.daggerhiltapplication.mvvm.Repo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,4 +26,9 @@ object HiltModule {
     fun sugar():SugarImpl{
         return SugarImpl()
     }
+    @Provides
+    fun provideRepo(coffee: Coffee): Repo {
+        return Repo(coffee)
+    }
+
 }
